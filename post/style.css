@@ -47,12 +47,12 @@ header
 
 main
 {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
+    /*background-color: white;*/
+    width: 100vw;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 160px);
 }
 
 .pop_up_text
