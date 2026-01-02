@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../../regular_style/style.css" />
+    <link rel="icon" href="../../../img/favicon.ico" type="image/ico" />
+    <meta charset="UTF-8" />
+    <title>SKKULEE.github.io/post/010</title>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <a href="/">SKKULEE.github.io</a>
+        </div>          
+        <nav class="links">
+            <a href="/about" class="btn">ABOUT</a>
+            <a href="/post" class="btn">POST</a>
+            <a href="/portfolio" class="btn">PORTFOLIO</a>
+            <a href="/projects" class="btn">PROJECTS</a>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar" id="left_sidebar">
+
+        </div>
+        <div class="content">
+            <h1></h1>
+            <h1></h1>
+            <h1 class="pop_up_content" style="animation-delay: 0ms;">커널 아카데미 AI Lab #010 78–96일차 일상 대화 요약 경진대회</h1>
+            <p class="pop_up_content" style="animation-delay: 200ms; color: #808080; text-align: end;">2025.10.24.(FRI)</p>
+            <img class="pop_up_content" style="animation-delay: 400ms;" src="./img/competition.png">
+            <h2 class="pop_up_content" style="animation-delay: 600ms;">NLP(Natural Language Processing)</h2>
+            <p class="pop_up_content" style="animation-delay: 800ms;">&nbsp;78–86일차는 CV Generation, NLP 녹화강의를 수강했다. 87일차부터는 NLP 녹화강의 수강과 함께 세 번째 경진대회이자 자연어 처리 경진대회인 일상 대화 요약 대회가 진행됐다.</p>
+            <h2 class="pop_up_content" style="animation-delay: 1000ms;">대회 소개</h2>
+            <p class="pop_up_content" style="animation-delay: 1200ms;">&nbsp;이번 대회는 최대 7명의 화자가 등장하는 499개의 대화문을 요약하는 대회로, 그 진행 기간은 09.26.–10.16.로 추석 연휴를 포함하여 약 3주간이였다. 대회 채점 기준은 Rouge-N, Rouge-L, Rouge-F1을 기반으로 한 자체 지표였고, 6명이 한 팀을 이루어 대회에 참여하게 되었다.</p>
+            <h2 class="pop_up_content" style="animation-delay: 1400ms;">EDA/Augmentation</h2>
+            <p class="pop_up_content" style="animation-delay: 1600ms;">&nbsp;예측해야 할 target 데이터가 449개로 적은데 반해 학습에 쓰일 train 데이터는 12457개로 비교적 많았다. 그럼에도 여전히 충분한 숫자는 아니었기에 Augmentation이 필요했다. 이외에도 대화문 속에서 통일되지 않은 문장부호 및 고유명사 등의 노이즈를 확인할 수 있었다. Augmentation 및 denoising은 링크된 <a href="https://catsirup.github.io/ai/2020/04/21/nlp_data_argumentation.html" target="_blank" style="text-decoration-line: none;">블로그</a>의 내용을 참고하여 SR(Synonym Replacement), RI(Random Insertion), RS(Random Swap), RD(Random Deletion) 네 가지 기법을 활용하여 진행했다.</p>
+            <h2 class="pop_up_content" style="animation-delay: 1800ms;">Modeling/Training</h2>
+            <p class="pop_up_content" style="animation-delay: 2000ms;">&nbsp;모델은 gogamza, koBART, LoRA SOLA 모델을 활용해봤고, 이 외에도 업스테이지 측에서 제공하는 Solar Pro API를 활용해 대화 요약을 진행해보기도 했다.</p>
+            <h2 class="pop_up_content" style="animation-delay: 2200ms;">Validation/Prediction</h2>
+            <p class="pop_up_content" style="animation-delay: 2400ms;">&nbsp;K-fold Cross Validation 기법을 활용하여 평가를 진행했다.</p>
+            <h2 class="pop_up_content" style="animation-delay: 2600ms;">대회 결과</h2>
+            <p class="pop_up_content" style="animation-delay: 2800ms;">&nbsp;최종 채점 직전까지만 해도 5개 팀 중 꼴찌를 기록하고 있었는데, 예상치 못하게 최종 채점에서 결과가 크게 뒤집히며 2등을 달성하게 됐다. 다른 팀들은 중간 채점에 맞춰 overfitting 돼 있었고, 우리 팀은 비교적 general한 상황에 맞춰져 있었던 것으로 보인다.</p>
+            <h2 class="pop_up_content" style="animation-delay: 2600ms;">아쉬웠던 점</h2>
+            <p class="pop_up_content" style="animation-delay: 2800ms;">&nbsp;Solar Pro API를 더 활용하지 못 한 점이 아쉬웠다. 프롬프트 엔지니어링에 익숙치 않아 그 성능을 충분히 활용하지 못 한 느낌이 들었다.</p>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+        </div>
+        <div class="sidebar" id="right_sidebar">
+
+        </div>
+    </main>
+    
+    <footer>
+        <div class="column_divider" style="align-items: flex-start;">
+            <nav class="links">
+                <a href="/about" class="btn">ABOUT</a>
+                <a href="/post" class="btn">POST</a>
+                <a href="/portfolio" class="btn">PORTFOLIO</a>
+                <a href="/projects" class="btn">PROJECTS</a>
+            </nav>
+            <p style="margin-left: 8px; opacity: 0.5;">@2025 SKKULEE</p>
+        </div>
+        <div class="column_divider" style="align-items: flex-end;">
+            <nav class="links">
+                <a href="https://github.com/SKKULEE" class="btn" target="_blank" rel="noopener noreferrer">GITHUB</a>
+                <a href="mailto: chan1122@g.skku.edu" class="btn">E-MAIL</a>
+            </nav>
+            <p style="margin-right: 10px; opacity: 0.5;">made with vanilla HTML/JS/CSS</p>
+        </div>
+    </footer>
+</body>
+</html>
